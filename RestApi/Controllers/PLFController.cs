@@ -63,7 +63,20 @@ namespace RestApi.Controllers
         {
             return FormData.Content("Content", "", "", schoolYear, schoolCode, itemCode, value);
         }
-
+        /// <summary>
+        /// 
+        ///  http://localhost:9517/api/PLF/?userId=mif&schoolYear=20182019schoolCode=0290itemCode=PLP11value=myinputtext
+        /// </summary>
+        /// <param name="userID"></param>
+        /// <param name="schoolYear"></param>
+        /// <param name="schoolCode"></param>
+        /// <param name="itemCode"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public string Get(string userID,string schoolYear, string schoolCode, string itemCode, string value)
+        {
+            return FormData.Content("Content", userID, "", schoolYear, schoolCode, itemCode, value);
+        }
         /// <summary>
         /// This is save the content to Database
         /// </summary>

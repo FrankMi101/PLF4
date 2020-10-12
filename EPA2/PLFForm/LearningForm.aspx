@@ -402,7 +402,7 @@
 
 <script type="text/javascript">
     var Base = {
-        "UserID": $("#hfUserID").val(),
+        "userID": $("#hfUserID").val(),
         "schoolyear": $("#hfSchoolyear").val(),
         "schoolcode": $("#hfSchoolcode").val(),
         "DataLoad": $("#hfDataLoad").val(),
@@ -518,8 +518,32 @@
     function SaveTextContentAPI(itemCode, value) {
         //  string userID, string schoolYear, string schoolCode, string itemCode, string value
         var myUrl = DataUrl.myUrl
-        var myPara = "userID=" + Base.UserID + "&schoolYear=" + Base.schoolyear + "&schoolCode=" + Base.schoolcode + "&itemCode=" + itemCode + "&value=" + value;
-        saveMyJSONData(myUrl, myPara);
+        var myData = {
+            userID: Base.userID,
+            schoolyear: Base.schoolyear,
+            schoolcode: Base.schoolcode,
+            itemCode: itemCode,
+            value: value
+        }
+       var myPara = "?userID=" + Base.userID + "&schoolYear=" + Base.schoolyear + "&schoolCode=" + Base.schoolcode + "&itemCode=" + itemCode + "&value=" + value;
+    
+
+        $.get(myUrl + myPara, function (data, status) {
+             alert("Data: " + data + "\nStatus: " + status);
+            
+        });
+        // *** Post methed dose work somehow. 
+
+        //$.post(myUrl, myData,
+        //    function (data, status) {
+        //        alert("Data: " + data + "\nStatus: " + status);
+        //    });
+
+        //$.post(myUrl + myPara,
+        //  ,
+        //    function (data, status) {
+        //        alert("Data: " + data + "\nStatus: " + status);
+        //    });
 
         //$.post(myUrl, function (data, status) {
         //    alert("Data save Successfully!"); 
@@ -627,12 +651,14 @@
     }
 
     function saveMyJSONData(myUrl,myPara) {
+    
+
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", myUrl, true);
 
         //Send the proper header information along with the request
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       // xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onreadystatechange = function () { // Call a function when the state changes.
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
