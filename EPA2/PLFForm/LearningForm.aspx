@@ -141,6 +141,7 @@
             <asp:HiddenField ID="hfSignOffSO" runat="server" />
             <asp:HiddenField ID="hfPublish" runat="server" />
             <asp:HiddenField ID="hfComplete" runat="server" />
+            <asp:HiddenField ID="hfDataLoad" runat="server" />
             <asp:Button ID="ButtonSave" runat="server" Text="Save & Submit" OnClick="ButtonSave_Click" />
             <a id="PrintPLF" href="#" runat="server" class="linkbutton" style="height: 25px;">
                 <img alt="pdf file" src="../images/pdfReport.bmp" class="imgButton" />
@@ -153,7 +154,8 @@
                 Publish Form</a>
             <asp:Label ID="LabelSaveResult" runat="server" Text=""></asp:Label>
 
-
+            <%--  <asp:Button ID="ButtonSave2" runat="server" Text="Get Data by Restful API" Visible="false"  />--%>
+            <asp:Label ID="GetDatabyAPI" runat="server" Text="Get Data by Restful API" Visible="false" CssClass="linkbutton"></asp:Label>
         </div>
         <div style="text-align: center;">
             <h2>Toronto Catholic District School Board
@@ -399,16 +401,18 @@
 <script src="../Scripts/bootstrap.min.js"></script>
 
 <script type="text/javascript">
-
-    var UserID = $("#hfUserID").val();
-    var schoolyear = $("#hfSchoolyear").val();
-    var schoolcode = $("#hfSchoolcode").val();
+    var Base = {
+        "UserID": $("#hfUserID").val(),
+        "schoolyear": $("#hfSchoolyear").val(),
+        "schoolcode": $("#hfSchoolcode").val(),
+        "DataLoad": $("#hfDataLoad").val(),
+    }
 
     var workingYear;
 
 
     function openActionPage(vTop, vLeft, vHeight, vWidth, goPage, pTitle, signType) {
-        goPage = goPage + "?yID=" + schoolyear + "&sID=" + schoolcode + "&tID=" + signType;
+        goPage = goPage + "?yID=" + Base.schoolyear + "&sID=" + Base.schoolcode + "&tID=" + signType;
         try {
             $("#ActioniFramePage").attr('src', goPage);
             $("#ActionTitle").html(pTitle);
@@ -466,7 +470,7 @@
         });
         $("#PrintPLF").click(function (event) {
             var rName = "PLFDocument"
-            window.open('PDFPrint.aspx?rID=' + rName + '&yID=' + schoolyear + '&sID=' + schoolcode + '&rType=' + 'PDF' + '&rBlank=' + 'N', "PrintForm", "width=800 height=600, top=50, left=50, toolbars=no, scrollbars=no,status=no,resizable=yes");
+            window.open('PDFPrint.aspx?rID=' + rName + '&yID=' + Base.schoolyear + '&sID=' + Base.schoolcode + '&rType=' + 'PDF' + '&rBlank=' + 'N', "PrintForm", "width=800 height=600, top=50, left=50, toolbars=no, scrollbars=no,status=no,resizable=yes");
 
         });
         $("#SignOffPLF").click(function (event) {
@@ -503,8 +507,23 @@
     });
 
     function SaveTextContent(itemCode, value) {
-        var helptext = PLF.Models.WebService.SaveText(UserID, schoolyear, schoolcode, itemCode, value, onSuccess, onFailure);
+        if (Base.DataLoad == "Restful-API") {
+            SaveTextContentAPI(itemCode, value);
+        }
+        else {
+            var helptext = PLF.Models.WebService.SaveText(UserID, Base.schoolyear, Base.schoolcode, itemCode, value, onSuccess, onFailure);
+        }
 
+    }
+    function SaveTextContentAPI(itemCode, value) {
+        //  string userID, string schoolYear, string schoolCode, string itemCode, string value
+        var myUrl = DataUrl.myUrl
+        var myPara = "userID=" + Base.UserID + "&schoolYear=" + Base.schoolyear + "&schoolCode=" + Base.schoolcode + "&itemCode=" + itemCode + "&value=" + value;
+        saveMyJSONData(myUrl, myPara);
+
+        //$.post(myUrl, function (data, status) {
+        //    alert("Data save Successfully!"); 
+        //});
     }
     function onSuccess(result) {
         $("#LabelSaveResult").text("Save... : " + result);
@@ -514,7 +533,7 @@
     }
 
 
-    var ApiCallButton = document.querySelector("#ButtonSave2");
+    var ApiCallButton = document.querySelector("#GetDatabyAPI");
     if (ApiCallButton)
         ApiCallButton.addEventListener("click", function () {
 
@@ -557,6 +576,7 @@
             //    } else { htmlString += " and " + applicant.Roster[j]; }
             //};
         };
+
 
     }
     var DataUrl = {
@@ -606,6 +626,21 @@
         myRequest.send();
     }
 
+    function saveMyJSONData(myUrl,myPara) {
 
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", myUrl, true);
+
+        //Send the proper header information along with the request
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        xhr.onreadystatechange = function () { // Call a function when the state changes.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                // Request finished. Do processing here.
+                alert("Data Save Successfully!");
+            }
+        }
+        xhr.send(myPara);
+    }
 
 </script>

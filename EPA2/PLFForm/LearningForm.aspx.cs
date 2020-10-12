@@ -15,8 +15,8 @@ namespace PLF.PLFForm
     public partial class LearningForm : System.Web.UI.Page
     {
         string schoolYear;
-        string schoolCode  ;
-        protected async  void Page_Load(object sender, EventArgs e)
+        string schoolCode;
+        protected async void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
@@ -28,22 +28,31 @@ namespace PLF.PLFForm
                 {
                     WorkingProfile.SchoolYear = Page.Request.QueryString["yID"];
                     WorkingProfile.SchoolCode = Page.Request.QueryString["sID"];
-                     WorkingProfile.SchoolName = UserLastWorking.SchoolName;
+                    WorkingProfile.SchoolName = UserLastWorking.SchoolName;
                     WorkingProfile.SchoolNameB = UserLastWorking.SchoolNameB;
                     WorkingProfile.SchoolPrincipal = UserLastWorking.SchoolPrincipal;
-                   schoolYear = Page.Request.QueryString["yID"];
+                    schoolYear = Page.Request.QueryString["yID"];
                     schoolCode = Page.Request.QueryString["sID"];
 
                 }
                 Assemblies_Title();
-               // LoadingPageDataAll();
-                await LoadingPageDataAllAsync();
+                // LoadingPageDataAll();
+                hfDataLoad.Value = WebConfig.getValuebyKey("DataLoad");
+                if (hfDataLoad.Value == "Restful-API")
+                {
+                    GetDatabyAPI.Visible = true;  // Get From Data by Restful API Call              
+                    await LoadingPageDataAllAsync("Title");
+                }
+                else
+                {
+                    await LoadingPageDataAllAsync("All");
+                }
             }
         }
-          private void Assemblies_Title()
+        private void Assemblies_Title()
         {
             string userID = User.Identity.Name;
-            LabelSchoolyear.Text = DateFC.SchoolYearFrom("-",schoolYear);
+            LabelSchoolyear.Text = DateFC.SchoolYearFrom("-", schoolYear);
             LabelSchool.Text = WorkingProfile.SchoolName;
             LabelPrincipal.Text = WorkingProfile.SchoolPrincipal;
             LabelSuperintendent.Text = WorkingProfile.UserAreaSuperintendent;
@@ -53,22 +62,20 @@ namespace PLF.PLFForm
             hfUserID.Value = User.Identity.Name;
             hfSignOff.Value = SignOff.Signature("Result", userID, "", schoolYear, schoolCode, "School");
             hfSignOffSO.Value = SignOff.Signature("Result", userID, "", schoolYear, schoolCode, "SO");
-            hfPublish.Value = SignOff.Signature("Result", userID,"", schoolYear, schoolCode, "Publish");
+            hfPublish.Value = SignOff.Signature("Result", userID, "", schoolYear, schoolCode, "Publish");
             hfComplete.Value = SignOff.Signature("Result", userID, "", schoolYear, schoolCode, "Complete");
 
-        } 
-      private void LoadingPageDataAll()
+        }
+        private void LoadingPageDataAll()
         {
             //  Loading_Title();
             //  Loading_Data();
-             FormData.AssembliesPLFForm(Page, User.Identity.Name, schoolYear, schoolCode);
+            FormData.AssembliesPLFForm(Page, User.Identity.Name, schoolYear, schoolCode, "All");
         }
-        private async Task LoadingPageDataAllAsync()
+        private async Task LoadingPageDataAllAsync(string loadContent)
         {
-        
-            
-            await Task.Run(() =>  FormData.AssembliesPLFForm(Page, User.Identity.Name, schoolYear, schoolCode));
-          //  await Task.Run(() => FormData.AssembliesPLFForm(Page, User.Identity.Name, WorkingProfile.SchoolYear, WorkingProfile.SchoolCode));
+            await Task.Run(() => FormData.AssembliesPLFForm(Page, User.Identity.Name, schoolYear, schoolCode, loadContent));
+            //  await Task.Run(() => FormData.AssembliesPLFForm(Page, User.Identity.Name, WorkingProfile.SchoolYear, WorkingProfile.SchoolCode));
         }
         protected void ButtonSave_Click(object sender, EventArgs e)
         {
@@ -80,11 +87,12 @@ namespace PLF.PLFForm
             //  contentlist = FormData.ListofContent(WorkingProfile.SchoolYear, WorkingProfile.SchoolCode);
             //  var newv = "";
         }
-        private async Task  LoadingPageDataAsync() {
-              await Task.Run(() => Loading_TitleAsync());
-              await Task.Run(() => Loading_DataAsync());
+        private async Task LoadingPageDataAsync()
+        {
+            await Task.Run(() => Loading_TitleAsync());
+            await Task.Run(() => Loading_DataAsync());
         }
-    
+
         private void Loading_Title()
 
         {
@@ -145,8 +153,8 @@ namespace PLF.PLFForm
             }
         }
 
-        private   void Loading_TitleAsync()
-            
+        private void Loading_TitleAsync()
+
         {
             try
             {
@@ -156,7 +164,7 @@ namespace PLF.PLFForm
                     {
                         string code = pControl.ID.Replace("Label", "");
                         Label lbl = (Label)pControl;
-                        lbl.Text =   FormData.Title(code) ;
+                        lbl.Text = FormData.Title(code);
                     }
                 }
                 foreach (Control pControl in PLPlanning.Controls)
@@ -165,7 +173,7 @@ namespace PLF.PLFForm
                     {
                         string code = pControl.ID.Replace("Label", "");
                         Label lbl = (Label)pControl;
-                        lbl.Text =   FormData.Title(code) ;
+                        lbl.Text = FormData.Title(code);
                     }
                 }
             }
@@ -174,17 +182,18 @@ namespace PLF.PLFForm
                 var ms = ex.Message;
             }
         }
-        private   void Loading_DataAsync()
+        private void Loading_DataAsync()
         {
             try
-            {string userID = User.Identity.Name;
+            {
+                string userID = User.Identity.Name;
                 foreach (Control pControl in DataReview.Controls)
                 {
                     if (pControl is HtmlTextArea)
                     {
                         string code = pControl.ID.Replace("Text", "");
                         HtmlTextArea txt = (HtmlTextArea)pControl;
-                        txt.Value =   FormData.Content("Get", userID, WorkingProfile.UserRole, WorkingProfile.SchoolYear, WorkingProfile.SchoolCode, code) ;
+                        txt.Value = FormData.Content("Get", userID, WorkingProfile.UserRole, WorkingProfile.SchoolYear, WorkingProfile.SchoolCode, code);
                     }
                 }
                 foreach (Control pControl in PLPlanning.Controls)
@@ -193,7 +202,7 @@ namespace PLF.PLFForm
                     {
                         string code = pControl.ID.Replace("Text", "");
                         HtmlTextArea txt = (HtmlTextArea)pControl;
-                        txt.Value =  FormData.Content("Get", userID, WorkingProfile.UserRole, WorkingProfile.SchoolYear, WorkingProfile.SchoolCode, code) ;
+                        txt.Value = FormData.Content("Get", userID, WorkingProfile.UserRole, WorkingProfile.SchoolYear, WorkingProfile.SchoolCode, code);
                     }
                 }
             }
@@ -203,7 +212,7 @@ namespace PLF.PLFForm
             }
         }
 
-     
+
 
     }
 }
