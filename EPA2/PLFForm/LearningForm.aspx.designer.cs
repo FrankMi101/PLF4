@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PLF.PLFForm
-{
-
-
-    public partial class LearningForm
-    {
-
+namespace PLF.PLFForm {
+    
+    
+    public partial class LearningForm {
+        
         /// <summary>
         /// Form1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm Form1;
-
+        
         /// <summary>
         /// ScriptManager1 control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-
+        
         /// <summary>
         /// pageTop control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pageTop;
-
+        
         /// <summary>
         /// hfSchoolyear control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfSchoolyear;
-
+        
         /// <summary>
         /// hfSchoolcode control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfSchoolcode;
-
+        
         /// <summary>
         /// hfUserRole control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfUserRole;
-
+        
         /// <summary>
         /// hfUserID control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfUserID;
-
+        
         /// <summary>
         /// hfSignOff control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfSignOff;
-
+        
         /// <summary>
         /// hfSignOffSO control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfSignOffSO;
-
+        
         /// <summary>
         /// hfPublish control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfPublish;
-
+        
         /// <summary>
         /// hfComplete control.
         /// </summary>
@@ -112,16 +110,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfComplete;
-
-        /// <summary>
-        /// hfDataLoad control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfDataLoad;
-
+        
         /// <summary>
         /// ButtonSave control.
         /// </summary>
@@ -130,7 +119,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonSave;
-
+        
         /// <summary>
         /// PrintPLF control.
         /// </summary>
@@ -139,7 +128,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor PrintPLF;
-
+        
         /// <summary>
         /// SignOffPLF control.
         /// </summary>
@@ -148,7 +137,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor SignOffPLF;
-
+        
         /// <summary>
         /// PublishPLF control.
         /// </summary>
@@ -157,7 +146,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor PublishPLF;
-
+        
         /// <summary>
         /// LabelSaveResult control.
         /// </summary>
@@ -166,16 +155,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelSaveResult;
-
-        /// <summary>
-        /// GetDatabyAPI control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label GetDatabyAPI;
-
+        
         /// <summary>
         /// LabelSchoolyear control.
         /// </summary>
@@ -184,7 +164,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelSchoolyear;
-
+        
         /// <summary>
         /// LabelSchool control.
         /// </summary>
@@ -193,7 +173,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelSchool;
-
+        
         /// <summary>
         /// LabelPrincipal control.
         /// </summary>
@@ -202,7 +182,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPrincipal;
-
+        
         /// <summary>
         /// LabelSuperintendent control.
         /// </summary>
@@ -211,7 +191,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelSuperintendent;
-
+        
         /// <summary>
         /// btnDataReview control.
         /// </summary>
@@ -220,7 +200,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDataReview;
-
+        
         /// <summary>
         /// btnPlanning control.
         /// </summary>
@@ -229,7 +209,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnPlanning;
-
+        
         /// <summary>
         /// hfSelectedTab control.
         /// </summary>
@@ -238,7 +218,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfSelectedTab;
-
+        
         /// <summary>
         /// pageBody control.
         /// </summary>
@@ -247,7 +227,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pageBody;
-
+        
         /// <summary>
         /// FormContent control.
         /// </summary>
@@ -256,7 +236,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl FormContent;
-
+        
         /// <summary>
         /// DataReview control.
         /// </summary>
@@ -265,7 +245,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl DataReview;
-
+        
         /// <summary>
         /// LabelBDA01 control.
         /// </summary>
@@ -274,7 +254,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA01;
-
+        
         /// <summary>
         /// TextBDA01 control.
         /// </summary>
@@ -283,7 +263,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA01;
-
+        
         /// <summary>
         /// LabelBDA02 control.
         /// </summary>
@@ -292,7 +272,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA02;
-
+        
         /// <summary>
         /// TextBDA02 control.
         /// </summary>
@@ -301,7 +281,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA02;
-
+        
         /// <summary>
         /// LabelBDA11 control.
         /// </summary>
@@ -310,7 +290,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA11;
-
+        
         /// <summary>
         /// LabelBDA12 control.
         /// </summary>
@@ -319,7 +299,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA12;
-
+        
         /// <summary>
         /// LabelBDA13 control.
         /// </summary>
@@ -328,7 +308,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA13;
-
+        
         /// <summary>
         /// LabelBDA14 control.
         /// </summary>
@@ -337,7 +317,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA14;
-
+        
         /// <summary>
         /// LabelBDA15 control.
         /// </summary>
@@ -346,7 +326,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA15;
-
+        
         /// <summary>
         /// TextBDA11 control.
         /// </summary>
@@ -355,7 +335,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA11;
-
+        
         /// <summary>
         /// TextBDA12 control.
         /// </summary>
@@ -364,7 +344,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA12;
-
+        
         /// <summary>
         /// TextBDA13 control.
         /// </summary>
@@ -373,7 +353,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA13;
-
+        
         /// <summary>
         /// TextBDA14 control.
         /// </summary>
@@ -382,7 +362,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA14;
-
+        
         /// <summary>
         /// TextBDA15 control.
         /// </summary>
@@ -391,7 +371,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA15;
-
+        
         /// <summary>
         /// LabelBDA21 control.
         /// </summary>
@@ -400,7 +380,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA21;
-
+        
         /// <summary>
         /// TextBDA21 control.
         /// </summary>
@@ -409,7 +389,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA21;
-
+        
         /// <summary>
         /// LabelBDA22 control.
         /// </summary>
@@ -418,7 +398,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA22;
-
+        
         /// <summary>
         /// TextBDA22 control.
         /// </summary>
@@ -427,7 +407,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA22;
-
+        
         /// <summary>
         /// LabelBDA23 control.
         /// </summary>
@@ -436,7 +416,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA23;
-
+        
         /// <summary>
         /// TextBDA23 control.
         /// </summary>
@@ -445,7 +425,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA23;
-
+        
         /// <summary>
         /// LabelBDA24 control.
         /// </summary>
@@ -454,7 +434,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA24;
-
+        
         /// <summary>
         /// TextBDA24 control.
         /// </summary>
@@ -463,7 +443,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA24;
-
+        
         /// <summary>
         /// LabelBDA25 control.
         /// </summary>
@@ -472,7 +452,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA25;
-
+        
         /// <summary>
         /// TextBDA25 control.
         /// </summary>
@@ -481,7 +461,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA25;
-
+        
         /// <summary>
         /// LabelBDA26 control.
         /// </summary>
@@ -490,7 +470,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelBDA26;
-
+        
         /// <summary>
         /// TextBDA26 control.
         /// </summary>
@@ -499,7 +479,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextBDA26;
-
+        
         /// <summary>
         /// PLPlanning control.
         /// </summary>
@@ -508,7 +488,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl PLPlanning;
-
+        
         /// <summary>
         /// LabelPLP11 control.
         /// </summary>
@@ -517,7 +497,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP11;
-
+        
         /// <summary>
         /// TextPLP11 control.
         /// </summary>
@@ -526,7 +506,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP11;
-
+        
         /// <summary>
         /// LabelPLP12 control.
         /// </summary>
@@ -535,7 +515,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP12;
-
+        
         /// <summary>
         /// TextPLP12 control.
         /// </summary>
@@ -544,7 +524,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP12;
-
+        
         /// <summary>
         /// LabelPLP13 control.
         /// </summary>
@@ -553,7 +533,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP13;
-
+        
         /// <summary>
         /// TextPLP13 control.
         /// </summary>
@@ -562,7 +542,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP13;
-
+        
         /// <summary>
         /// LabelPLP14 control.
         /// </summary>
@@ -571,7 +551,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP14;
-
+        
         /// <summary>
         /// TextPLP14 control.
         /// </summary>
@@ -580,7 +560,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP14;
-
+        
         /// <summary>
         /// LabelPLP15 control.
         /// </summary>
@@ -589,7 +569,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP15;
-
+        
         /// <summary>
         /// TextPLP15 control.
         /// </summary>
@@ -598,7 +578,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP15;
-
+        
         /// <summary>
         /// LabelPLP16 control.
         /// </summary>
@@ -607,7 +587,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP16;
-
+        
         /// <summary>
         /// TextPLP16 control.
         /// </summary>
@@ -616,7 +596,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP16;
-
+        
         /// <summary>
         /// LabelPLP17 control.
         /// </summary>
@@ -625,7 +605,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP17;
-
+        
         /// <summary>
         /// TextPLP17 control.
         /// </summary>
@@ -634,7 +614,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP17;
-
+        
         /// <summary>
         /// LabelPLP18 control.
         /// </summary>
@@ -643,7 +623,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP18;
-
+        
         /// <summary>
         /// TextPLP18 control.
         /// </summary>
@@ -652,7 +632,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP18;
-
+        
         /// <summary>
         /// LabelPLP19 control.
         /// </summary>
@@ -661,7 +641,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP19;
-
+        
         /// <summary>
         /// TextPLP19 control.
         /// </summary>
@@ -670,7 +650,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP19;
-
+        
         /// <summary>
         /// LabelPLP20 control.
         /// </summary>
@@ -679,7 +659,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelPLP20;
-
+        
         /// <summary>
         /// TextPLP20 control.
         /// </summary>
@@ -688,7 +668,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea TextPLP20;
-
+        
         /// <summary>
         /// pageFooter control.
         /// </summary>
@@ -697,7 +677,7 @@ namespace PLF.PLFForm
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pageFooter;
-
+        
         /// <summary>
         /// ActioniFramePage control.
         /// </summary>

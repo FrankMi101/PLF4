@@ -134,9 +134,8 @@ namespace BusinessOperation
             }
         }
 
-        public static void AssembliesPLFForm(Page myPage, string userID, string schoolYear, string schoolCode,string loadContent)
+        public static void AssembliesPLFForm(Page myPage, string userID, string schoolYear, string schoolCode)
         {
-               
             try
             {
                  
@@ -147,12 +146,9 @@ namespace BusinessOperation
                     var code = myitem.ItemCode;
                     Label newLable = (Label)myPage.FindControl("Label" + code);
                     newLable.Text = myitem.Title;
-                    if (loadContent == "All")
-                    {
-                        HtmlTextArea newArea = (HtmlTextArea)myPage.FindControl("Text" + code);
-                        newArea.Value = myitem.Notes;
-                    }
-                 }
+                    HtmlTextArea newArea = (HtmlTextArea) myPage.FindControl("Text" + code);
+                    newArea.Value = myitem.Notes;
+                }
             }
             catch (Exception ex)
             {
